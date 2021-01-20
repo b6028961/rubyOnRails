@@ -403,3 +403,747 @@ Processing by BooksController#index as HTML
 Completed 200 OK in 82ms (Views: 79.6ms | ActiveRecord: 1.9ms | Allocations: 4756)
 
 
+Started GET "/" for ::1 at 2021-01-20 18:00:14 +0000
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 5.2ms | Allocations: 229)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+/home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/webpack-cli/bin/cli.js:93
+				throw err;
+				^
+
+ReferenceError: environment is not defined
+    at Object.<anonymous> (/home/student/myRubyApps/rubyOnRails/bookstore_app/config/webpack/environment.js:2:1)
+    at Module._compile (/home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at Object.<anonymous> (/home/student/myRubyApps/rubyOnRails/bookstore_app/config/webpack/development.js:3:21)
+    at Module._compile (/home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at WEBPACK_OPTIONS (/home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/webpack-cli/bin/utils/convert-argv.js:114:13)
+    at requireConfig (/home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/webpack-cli/bin/utils/convert-argv.js:116:6)
+    at /home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/webpack-cli/bin/utils/convert-argv.js:123:17
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/webpack-cli/bin/utils/convert-argv.js:121:15)
+    at yargs.parse (/home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/webpack-cli/bin/cli.js:71:45)
+    at Object.parse (/home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/yargs/yargs.js:576:18)
+    at /home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/webpack-cli/bin/cli.js:49:8
+    at Object.<anonymous> (/home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/webpack-cli/bin/cli.js:366:3)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+
+  Rendered layout layouts/application.html.erb (Duration: 3459.6ms | Allocations: 7566)
+Completed 200 OK in 3536ms (Views: 3496.4ms | ActiveRecord: 0.0ms | Allocations: 10119)
+
+
+Started GET "/books/new" for ::1 at 2021-01-20 18:00:21 +0000
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 113.4ms | Allocations: 2659)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 153.5ms | Allocations: 6282)
+Completed 200 OK in 177ms (Views: 175.0ms | ActiveRecord: 0.0ms | Allocations: 7173)
+
+
+Started GET "/books" for ::1 at 2021-01-20 18:00:22 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (7.4ms)[0m  [1m[34mSELECT `books`.* FROM `books`[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 111.3ms | Allocations: 6186)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 142.4ms | Allocations: 9802)
+Completed 200 OK in 187ms (Views: 108.0ms | ActiveRecord: 38.8ms | Allocations: 11163)
+
+
+Started GET "/books" for ::1 at 2021-01-20 18:00:47 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (3.0ms)[0m  [1m[34mSELECT `books`.* FROM `books`[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 26.8ms | Allocations: 1392)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 78.3ms | Allocations: 5003)
+Completed 200 OK in 94ms (Views: 89.8ms | ActiveRecord: 3.0ms | Allocations: 5400)
+
+
+Started GET "/books" for ::1 at 2021-01-20 18:00:47 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (3.4ms)[0m  [1m[34mSELECT `books`.* FROM `books`[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 11.2ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 43.3ms | Allocations: 4393)
+Completed 200 OK in 57ms (Views: 52.7ms | ActiveRecord: 3.4ms | Allocations: 4793)
+
+
+Started GET "/books/new" for ::1 at 2021-01-20 18:00:48 +0000
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 7.1ms | Allocations: 810)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 79.2ms | Allocations: 5013)
+Completed 200 OK in 112ms (Views: 110.8ms | ActiveRecord: 0.0ms | Allocations: 5395)
+
+
+Started GET "/books" for ::1 at 2021-01-20 18:00:49 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (9.1ms)[0m  [1m[34mSELECT `books`.* FROM `books`[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 17.0ms | Allocations: 773)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 85.8ms | Allocations: 4977)
+Completed 200 OK in 96ms (Views: 84.9ms | ActiveRecord: 9.1ms | Allocations: 5367)
+
+
+Started GET "/books/new" for ::1 at 2021-01-20 18:00:50 +0000
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 20.3ms | Allocations: 810)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 70.4ms | Allocations: 5017)
+Completed 200 OK in 88ms (Views: 86.9ms | ActiveRecord: 0.0ms | Allocations: 5394)
+
+
+Started GET "/books/new" for ::1 at 2021-01-20 18:00:51 +0000
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 810)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 40.0ms | Allocations: 4422)
+Completed 200 OK in 72ms (Views: 57.4ms | ActiveRecord: 0.0ms | Allocations: 4804)
+
+
+Started GET "/" for ::1 at 2021-01-20 18:07:02 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3.7ms | Allocations: 229)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 96.9ms | Allocations: 6371)
+Completed 200 OK in 117ms (Views: 108.5ms | ActiveRecord: 0.0ms | Allocations: 8981)
+
+
+Started GET "/books" for ::1 at 2021-01-20 18:07:04 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.8ms)[0m  [1m[34mSELECT `books`.* FROM `books`[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 106.9ms | Allocations: 6191)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 175.6ms | Allocations: 9821)
+Completed 200 OK in 209ms (Views: 176.6ms | ActiveRecord: 11.5ms | Allocations: 10978)
+
+
+Started GET "/books/new" for ::1 at 2021-01-20 18:07:05 +0000
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 33.1ms | Allocations: 3255)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 84.0ms | Allocations: 6878)
+Completed 200 OK in 91ms (Views: 88.6ms | ActiveRecord: 0.0ms | Allocations: 7389)
+
+
+Started GET "/books/new" for ::1 at 2021-01-20 18:07:06 +0000
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 810)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 61.8ms | Allocations: 5011)
+Completed 200 OK in 70ms (Views: 69.0ms | ActiveRecord: 0.0ms | Allocations: 5394)
+
+
+Started GET "/books/new" for ::1 at 2021-01-20 18:07:06 +0000
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 12.3ms | Allocations: 810)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 38.3ms | Allocations: 4426)
+Completed 200 OK in 55ms (Views: 53.5ms | ActiveRecord: 0.0ms | Allocations: 4808)
+
+
+Started GET "/books/new" for ::1 at 2021-01-20 18:07:07 +0000
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 14.4ms | Allocations: 810)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 64.0ms | Allocations: 4420)
+Completed 200 OK in 86ms (Views: 85.5ms | ActiveRecord: 0.0ms | Allocations: 4797)
+
+
+Started GET "/books/new" for ::1 at 2021-01-20 18:07:08 +0000
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 7.9ms | Allocations: 810)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 37.9ms | Allocations: 4420)
+Completed 200 OK in 43ms (Views: 42.4ms | ActiveRecord: 0.0ms | Allocations: 4797)
+
+
+Started GET "/books/new" for ::1 at 2021-01-20 18:07:09 +0000
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 810)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 51.4ms | Allocations: 5008)
+Completed 200 OK in 62ms (Views: 61.1ms | ActiveRecord: 0.0ms | Allocations: 5385)
+
+
+Started GET "/books" for ::1 at 2021-01-20 18:07:09 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (2.0ms)[0m  [1m[34mSELECT `books`.* FROM `books`[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 12.0ms | Allocations: 781)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 68.5ms | Allocations: 5001)
+Completed 200 OK in 87ms (Views: 83.0ms | ActiveRecord: 2.0ms | Allocations: 5397)
+
+
+Started GET "/books/new" for ::1 at 2021-01-20 18:07:10 +0000
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 8.2ms | Allocations: 810)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 61.2ms | Allocations: 5019)
+Completed 200 OK in 75ms (Views: 74.0ms | ActiveRecord: 0.0ms | Allocations: 5396)
+
+
+Started GET "/books/new" for ::1 at 2021-01-20 18:07:11 +0000
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 24.3ms | Allocations: 810)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 70.5ms | Allocations: 4420)
+Completed 200 OK in 98ms (Views: 97.7ms | ActiveRecord: 0.0ms | Allocations: 5396)
+
+
+Started GET "/books/new" for ::1 at 2021-01-20 18:08:43 +0000
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 32.9ms | Allocations: 2800)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 306.9ms | Allocations: 8912)
+Completed 200 OK in 383ms (Views: 359.5ms | ActiveRecord: 0.0ms | Allocations: 11521)
+
+
+Started GET "/books/new" for ::1 at 2021-01-20 18:08:45 +0000
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 12.3ms | Allocations: 810)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 128.5ms | Allocations: 4430)
+Completed 200 OK in 156ms (Views: 152.7ms | ActiveRecord: 0.0ms | Allocations: 4814)
+
+
+Started GET "/books/new" for ::1 at 2021-01-20 18:08:46 +0000
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 15.3ms | Allocations: 810)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 78.2ms | Allocations: 4434)
+Completed 200 OK in 102ms (Views: 98.8ms | ActiveRecord: 0.0ms | Allocations: 4816)
+
+
+Started GET "/books/new" for ::1 at 2021-01-20 18:08:47 +0000
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 14.8ms | Allocations: 810)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 224.6ms | Allocations: 5024)
+Completed 200 OK in 240ms (Views: 239.5ms | ActiveRecord: 0.0ms | Allocations: 5406)
+
+
+Started GET "/books" for ::1 at 2021-01-20 18:08:48 +0000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (3.7ms)[0m  [1m[34mSELECT `books`.* FROM `books`[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 109.7ms | Allocations: 6194)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 156.2ms | Allocations: 9819)
+Completed 200 OK in 200ms (Views: 150.4ms | ActiveRecord: 34.1ms | Allocations: 11183)
+
+
+Started GET "/static_pages/contact" for ::1 at 2021-01-20 18:08:49 +0000
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 16.3ms | Allocations: 132)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 68.9ms | Allocations: 3774)
+Completed 200 OK in 112ms (Views: 110.6ms | ActiveRecord: 0.0ms | Allocations: 5248)
+
+
+Started GET "/static_pages/contact" for ::1 at 2021-01-20 18:10:08 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 8.4ms | Allocations: 245)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 242.3ms | Allocations: 6411)
+Completed 200 OK in 310ms (Views: 267.1ms | ActiveRecord: 0.0ms | Allocations: 9021)
+
+
+Started GET "/" for ::1 at 2021-01-20 18:10:13 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 9.1ms | Allocations: 116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 127.9ms | Allocations: 3775)
+Completed 200 OK in 198ms (Views: 178.3ms | ActiveRecord: 0.0ms | Allocations: 4283)
+
+
+Started GET "/static_pages/about" for ::1 at 2021-01-20 18:10:16 +0000
+Processing by StaticPagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 4.9ms | Allocations: 109)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 79.5ms | Allocations: 4383)
+Completed 200 OK in 124ms (Views: 122.5ms | ActiveRecord: 0.0ms | Allocations: 4895)
+
+
+Started GET "/static_pages/home" for ::1 at 2021-01-20 18:10:17 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 72.7ms | Allocations: 4278)
+Completed 200 OK in 109ms (Views: 105.5ms | ActiveRecord: 0.0ms | Allocations: 4661)
+
+
+Started GET "/static_pages/about" for ::1 at 2021-01-20 18:10:18 +0000
+Processing by StaticPagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 0.2ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 83.5ms | Allocations: 4275)
+Completed 200 OK in 106ms (Views: 105.0ms | ActiveRecord: 0.0ms | Allocations: 4652)
+
+
+Started GET "/static_pages/contact" for ::1 at 2021-01-20 18:10:18 +0000
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 0.2ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 89.9ms | Allocations: 4279)
+Completed 200 OK in 107ms (Views: 106.3ms | ActiveRecord: 0.0ms | Allocations: 4656)
+
+
+Started GET "/books/new" for ::1 at 2021-01-20 18:10:20 +0000
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 34.1ms | Allocations: 2659)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 85.2ms | Allocations: 6298)
+Completed 200 OK in 129ms (Views: 127.7ms | ActiveRecord: 0.0ms | Allocations: 7763)
+
+
+Started GET "/static_pages/contact" for ::1 at 2021-01-20 18:10:21 +0000
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 3.2ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 77.7ms | Allocations: 3695)
+Completed 200 OK in 110ms (Views: 104.5ms | ActiveRecord: 0.0ms | Allocations: 4073)
+
+
+Started GET "/static_pages/home" for ::1 at 2021-01-20 18:15:34 +0000
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3.9ms | Allocations: 227)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 133.0ms | Allocations: 6392)
+Completed 200 OK in 170ms (Views: 148.0ms | ActiveRecord: 0.0ms | Allocations: 9005)
+
+
+Started GET "/static_pages/about" for ::1 at 2021-01-20 18:15:35 +0000
+Processing by StaticPagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 2.3ms | Allocations: 106)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 198.0ms | Allocations: 3765)
+Completed 200 OK in 254ms (Views: 241.3ms | ActiveRecord: 0.0ms | Allocations: 4884)
+
+
+Started GET "/static_pages/contact" for ::1 at 2021-01-20 18:15:36 +0000
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 0.8ms | Allocations: 132)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 82.3ms | Allocations: 3796)
+Completed 200 OK in 144ms (Views: 132.9ms | ActiveRecord: 0.0ms | Allocations: 4908)
+
+
+Started GET "/static_pages/contact" for ::1 at 2021-01-20 18:18:37 +0000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 50.3ms | Allocations: 3723)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+/home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/webpack-cli/bin/cli.js:93
+				throw err;
+				^
+
+ReferenceError: environment is not defined
+    at Object.<anonymous> (/home/student/myRubyApps/rubyOnRails/bookstore_app/config/webpack/environment.js:2:1)
+    at Module._compile (/home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at Object.<anonymous> (/home/student/myRubyApps/rubyOnRails/bookstore_app/config/webpack/development.js:3:21)
+    at Module._compile (/home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at WEBPACK_OPTIONS (/home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/webpack-cli/bin/utils/convert-argv.js:114:13)
+    at requireConfig (/home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/webpack-cli/bin/utils/convert-argv.js:116:6)
+    at /home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/webpack-cli/bin/utils/convert-argv.js:123:17
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/webpack-cli/bin/utils/convert-argv.js:121:15)
+    at yargs.parse (/home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/webpack-cli/bin/cli.js:71:45)
+    at Object.parse (/home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/yargs/yargs.js:576:18)
+    at /home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/webpack-cli/bin/cli.js:49:8
+    at Object.<anonymous> (/home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/webpack-cli/bin/cli.js:366:3)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+
+  Rendered layout layouts/application.html.erb (Duration: 3163.2ms | Allocations: 8378)
+Completed 200 OK in 3194ms (Views: 3177.7ms | ActiveRecord: 0.0ms | Allocations: 10988)
+
+
+Started GET "/static_pages/contact" for ::1 at 2021-01-20 18:25:02 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 3.7ms | Allocations: 250)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+/home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/webpack-cli/bin/cli.js:93
+				throw err;
+				^
+
+ReferenceError: environment is not defined
+    at Object.<anonymous> (/home/student/myRubyApps/rubyOnRails/bookstore_app/config/webpack/environment.js:2:1)
+    at Module._compile (/home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at Object.<anonymous> (/home/student/myRubyApps/rubyOnRails/bookstore_app/config/webpack/development.js:3:21)
+    at Module._compile (/home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at WEBPACK_OPTIONS (/home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/webpack-cli/bin/utils/convert-argv.js:114:13)
+    at requireConfig (/home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/webpack-cli/bin/utils/convert-argv.js:116:6)
+    at /home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/webpack-cli/bin/utils/convert-argv.js:123:17
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/webpack-cli/bin/utils/convert-argv.js:121:15)
+    at yargs.parse (/home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/webpack-cli/bin/cli.js:71:45)
+    at Object.parse (/home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/yargs/yargs.js:576:18)
+    at /home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/webpack-cli/bin/cli.js:49:8
+    at Object.<anonymous> (/home/student/myRubyApps/rubyOnRails/bookstore_app/node_modules/webpack-cli/bin/cli.js:366:3)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+
+  Rendered layout layouts/application.html.erb (Duration: 2652.5ms | Allocations: 7595)
+Completed 200 OK in 2722ms (Views: 2683.7ms | ActiveRecord: 0.0ms | Allocations: 10205)
+
+
+Started GET "/static_pages/contact" for ::1 at 2021-01-20 18:33:07 +0000
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 58.2ms | Allocations: 6550)
+  Rendered layout layouts/application.html.erb (Duration: 61.9ms | Allocations: 6619)
+Completed 500 Internal Server Error in 114ms (ActiveRecord: 0.0ms | Allocations: 9195)
+
+
+  
+ActionView::Template::Error (The asset "form.css" is not present in the asset pipeline.
+):
+    1: <%= stylesheet_link_tag 'form', media: 'all', 'data-turbolinks-track': 'reload' %>
+    2: 
+    3: <h1>StaticPages#contact</h1>
+    4: <p>Find me in app/views/static_pages/contact.html.erb</p>
+  
+app/views/static_pages/contact.html.erb:1
+Started GET "/static_pages/contact" for ::1 at 2021-01-20 18:41:08 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 0.7ms | Allocations: 249)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 144.7ms | Allocations: 6415)
+Completed 200 OK in 206ms (Views: 165.1ms | ActiveRecord: 0.0ms | Allocations: 9025)
+
+
+Started GET "/static_pages/contact" for ::1 at 2021-01-20 18:42:52 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 4.2ms | Allocations: 249)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 80.1ms | Allocations: 6415)
+Completed 200 OK in 139ms (Views: 102.3ms | ActiveRecord: 0.0ms | Allocations: 9025)
+
+
+Started GET "/static_pages/contact" for ::1 at 2021-01-20 18:43:26 +0000
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 1.0ms | Allocations: 249)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 130.5ms | Allocations: 6415)
+Completed 200 OK in 238ms (Views: 145.9ms | ActiveRecord: 0.0ms | Allocations: 9025)
+
+
+Started GET "/static_pages/contact" for ::1 at 2021-01-20 18:45:03 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 3.9ms | Allocations: 249)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 71.2ms | Allocations: 6415)
+Completed 200 OK in 126ms (Views: 98.3ms | ActiveRecord: 0.0ms | Allocations: 9025)
+
+
+Started GET "/static_pages/contact" for ::1 at 2021-01-20 18:45:54 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 2.4ms | Allocations: 249)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 42.9ms | Allocations: 6415)
+Completed 200 OK in 99ms (Views: 66.1ms | ActiveRecord: 0.0ms | Allocations: 9025)
+
+
+Started GET "/" for ::1 at 2021-01-20 18:49:40 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 8.2ms | Allocations: 229)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 82.0ms | Allocations: 6395)
+Completed 200 OK in 144ms (Views: 104.9ms | ActiveRecord: 0.0ms | Allocations: 9005)
+
+
+Started GET "/static_pages/contact" for ::1 at 2021-01-20 18:49:43 +0000
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 2.8ms | Allocations: 136)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 132.5ms | Allocations: 3795)
+Completed 200 OK in 151ms (Views: 148.1ms | ActiveRecord: 0.0ms | Allocations: 4306)
+
+
+Started GET "/static_pages/contact" for ::1 at 2021-01-20 18:50:33 +0000
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 0.7ms | Allocations: 249)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 66.4ms | Allocations: 6415)
+Completed 200 OK in 110ms (Views: 87.1ms | ActiveRecord: 0.0ms | Allocations: 9025)
+
+
+Started GET "/static_pages/contact" for ::1 at 2021-01-20 18:51:32 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 7.7ms | Allocations: 249)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 110.7ms | Allocations: 6415)
+Completed 200 OK in 185ms (Views: 147.1ms | ActiveRecord: 0.0ms | Allocations: 9025)
+
+
+Started GET "/static_pages/contact" for ::1 at 2021-01-20 18:52:30 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 1.1ms | Allocations: 249)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 67.9ms | Allocations: 6415)
+Completed 200 OK in 137ms (Views: 113.3ms | ActiveRecord: 0.0ms | Allocations: 9025)
+
+
+Started GET "/static_pages/contact" for ::1 at 2021-01-20 18:54:15 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 0.9ms | Allocations: 250)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 186.2ms | Allocations: 6416)
+Completed 200 OK in 226ms (Views: 198.6ms | ActiveRecord: 0.0ms | Allocations: 9026)
+
+
+Started GET "/static_pages/contact" for ::1 at 2021-01-20 18:55:03 +0000
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 1.0ms | Allocations: 250)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 115.2ms | Allocations: 6416)
+Completed 200 OK in 157ms (Views: 141.1ms | ActiveRecord: 0.0ms | Allocations: 9026)
+
+
+Started GET "/static_pages/contact" for ::1 at 2021-01-20 18:55:06 +0000
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 0.2ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 86.1ms | Allocations: 3684)
+Completed 200 OK in 94ms (Views: 93.4ms | ActiveRecord: 0.0ms | Allocations: 4064)
+
+
+Started GET "/static_pages/contact" for ::1 at 2021-01-20 18:55:07 +0000
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 0.2ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.1ms | Allocations: 3691)
+Completed 200 OK in 51ms (Views: 48.2ms | ActiveRecord: 0.0ms | Allocations: 4066)
+
+
+Started GET "/static_pages/contact" for ::1 at 2021-01-20 18:56:08 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 2.6ms | Allocations: 250)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 69.5ms | Allocations: 6416)
+Completed 200 OK in 145ms (Views: 93.0ms | ActiveRecord: 0.0ms | Allocations: 9026)
+
+
+Started GET "/static_pages/contact" for ::1 at 2021-01-20 18:56:11 +0000
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 0.2ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 106.6ms | Allocations: 3684)
+Completed 200 OK in 115ms (Views: 113.7ms | ActiveRecord: 0.0ms | Allocations: 4064)
+
+
+Started GET "/static_pages/contact" for ::1 at 2021-01-20 18:56:12 +0000
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 91.9ms | Allocations: 3683)
+Completed 200 OK in 109ms (Views: 108.0ms | ActiveRecord: 0.0ms | Allocations: 4058)
+
+
+Started GET "/static_pages/contact" for ::1 at 2021-01-20 18:56:13 +0000
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 35.0ms | Allocations: 3684)
+Completed 200 OK in 63ms (Views: 62.0ms | ActiveRecord: 0.0ms | Allocations: 4063)
+
+
+Started GET "/static_pages/contact" for ::1 at 2021-01-20 18:56:47 +0000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 1.0ms | Allocations: 250)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 132.6ms | Allocations: 6416)
+Completed 200 OK in 194ms (Views: 167.2ms | ActiveRecord: 0.0ms | Allocations: 9026)
+
+
