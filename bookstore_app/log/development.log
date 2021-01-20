@@ -1,23 +1,30 @@
-Started GET "/" for ::1 at 2021-01-20 15:33:37 +0000
-  [1m[35m (2.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/" for ::1 at 2021-01-20 16:07:24 +0000
+  [1m[35m (13.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
 Processing by Rails::WelcomeController#index as HTML
   Rendering /home/student/.rvm/gems/ruby-2.7.2/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb
-  Rendered /home/student/.rvm/gems/ruby-2.7.2/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 47.6ms | Allocations: 439)
-Completed 200 OK in 136ms (Views: 73.9ms | ActiveRecord: 0.0ms | Allocations: 3575)
+  Rendered /home/student/.rvm/gems/ruby-2.7.2/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 28.8ms | Allocations: 439)
+Completed 200 OK in 101ms (Views: 45.4ms | ActiveRecord: 0.0ms | Allocations: 3575)
 
 
-Started GET "/static_pages/home" for ::1 at 2021-01-20 15:38:19 +0000
-  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/" for ::1 at 2021-01-20 16:11:40 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/student/.rvm/gems/ruby-2.7.2/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/student/.rvm/gems/ruby-2.7.2/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 23.9ms | Allocations: 333)
+Completed 200 OK in 60ms (Views: 31.7ms | ActiveRecord: 0.0ms | Allocations: 2469)
+
+
+Started GET "/static_pages/home" for ::1 at 2021-01-20 16:11:47 +0000
 Processing by StaticPagesController#home as HTML
   Rendering layout layouts/application.html.erb
   Rendering static_pages/home.html.erb within layouts/application
-  Rendered static_pages/home.html.erb within layouts/application (Duration: 5.5ms | Allocations: 219)
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 106)
 [Webpacker] Compiling...
 [Webpacker] Compiled all packs in /home/student/myRubyApps/rubyOnRails/bookstore_app/public/packs
 [Webpacker] Hash: 415a948d492e21802f43
 Version: webpack 4.46.0
-Time: 3389ms
-Built at: 01/20/2021 3:38:25 PM
+Time: 5498ms
+Built at: 01/20/2021 4:11:56 PM
                                      Asset       Size       Chunks                         Chunk Names
     js/application-d5a3c3b4dce84b5eb605.js    125 KiB  application  [emitted] [immutable]  application
 js/application-d5a3c3b4dce84b5eb605.js.map    139 KiB  application  [emitted] [dev]        application
@@ -29,149 +36,370 @@ Entrypoint application = js/application-d5a3c3b4dce84b5eb605.js js/application-d
 [./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
     + 3 hidden modules
 
-  Rendered layout layouts/application.html.erb (Duration: 5857.9ms | Allocations: 17425)
-Completed 200 OK in 5896ms (Views: 5878.5ms | ActiveRecord: 0.0ms | Allocations: 19965)
+  Rendered layout layouts/application.html.erb (Duration: 9068.3ms | Allocations: 17424)
+Completed 200 OK in 9082ms (Views: 9080.7ms | ActiveRecord: 0.0ms | Allocations: 18517)
 
 
-Started GET "/static_pages/home" for ::1 at 2021-01-20 15:42:57 +0000
-  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/" for ::1 at 2021-01-20 16:18:31 +0000
+  [1m[35m (9.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
 Processing by StaticPagesController#home as HTML
   Rendering layout layouts/application.html.erb
   Rendering static_pages/home.html.erb within layouts/application
-  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 219)
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 4.1ms | Allocations: 229)
 [Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layout layouts/application.html.erb (Duration: 55.1ms | Allocations: 5854)
-Completed 200 OK in 75ms (Views: 67.6ms | ActiveRecord: 0.0ms | Allocations: 8451)
+  Rendered layout layouts/application.html.erb (Duration: 90.6ms | Allocations: 5880)
+Completed 200 OK in 132ms (Views: 102.6ms | ActiveRecord: 0.0ms | Allocations: 8420)
 
 
-Started GET "/static_pages/home" for ::1 at 2021-01-20 15:42:59 +0000
+Started GET "/" for ::1 at 2021-01-20 16:27:31 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
 Processing by StaticPagesController#home as HTML
   Rendering layout layouts/application.html.erb
   Rendering static_pages/home.html.erb within layouts/application
-  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 229)
 [Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layout layouts/application.html.erb (Duration: 47.9ms | Allocations: 4133)
-Completed 200 OK in 50ms (Views: 49.9ms | ActiveRecord: 0.0ms | Allocations: 4517)
+  Rendered layout layouts/application.html.erb (Duration: 332.3ms | Allocations: 17293)
+Completed 200 OK in 422ms (Views: 367.5ms | ActiveRecord: 0.0ms | Allocations: 19902)
 
 
-Started GET "/static_pages/home" for ::1 at 2021-01-20 15:43:00 +0000
+Started GET "/books/new" for ::1 at 2021-01-20 16:27:36 +0000
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 110.7ms | Allocations: 4839)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 145.7ms | Allocations: 8404)
+Completed 200 OK in 189ms (Views: 186.8ms | ActiveRecord: 0.0ms | Allocations: 9286)
+
+
+Started POST "/books/new" for ::1 at 2021-01-20 16:27:54 +0000
+  
+ActionController::RoutingError (No route matches [POST] "/books/new"):
+  
+Started GET "/books/new" for ::1 at 2021-01-20 16:30:22 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+NameError (undefined local variable or method `params' for BooksController:Class):
+  
+app/controllers/books_controller.rb:6:in `<class:BooksController>'
+app/controllers/books_controller.rb:1:in `<main>'
+Started GET "/books/new" for ::1 at 2021-01-20 16:31:31 +0000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 31.0ms | Allocations: 2807)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 118.6ms | Allocations: 8798)
+Completed 200 OK in 185ms (Views: 152.7ms | ActiveRecord: 0.0ms | Allocations: 11407)
+
+
+Started POST "/books" for ::1 at 2021-01-20 16:31:35 +0000
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "price"=>"", "book_id"=>"d", "publisher"=>"", "description"=>"", "number"=>""}, "commit"=>"Save Book"}
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 26)
+Completed 200 OK in 33ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 519)
+
+
+  [1m[35m (72.6ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (64.1ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('386464997076477690', 0)[0m
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateBooks (20210120164846)
+  [1m[35m (106.3ms)[0m  [1m[35mCREATE TABLE `books` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `price` float(24), `book_id` varchar(255), `publisher` varchar(255), `description` text, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210120164846')[0m
+  [1m[36mTRANSACTION (20.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (6.7ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (64.6ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2021-01-20 16:51:56.800306', '2021-01-20 16:51:56.800306')[0m
+  [1m[36mTRANSACTION (8.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT RELEASE_LOCK('386464997076477690')[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/new/book" for ::1 at 2021-01-20 16:59:09 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/new/book"):
+  
+Started GET "/create/book" for ::1 at 2021-01-20 16:59:15 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/create/book"):
+  
+Started GET "/" for ::1 at 2021-01-20 16:59:20 +0000
 Processing by StaticPagesController#home as HTML
   Rendering layout layouts/application.html.erb
   Rendering static_pages/home.html.erb within layouts/application
-  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 37)
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 116)
 [Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 3539)
-Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.0ms | Allocations: 3921)
+  Rendered layout layouts/application.html.erb (Duration: 59.6ms | Allocations: 6123)
+Completed 200 OK in 88ms (Views: 85.5ms | ActiveRecord: 0.0ms | Allocations: 8105)
 
 
-Started GET "/static_pages/home" for ::1 at 2021-01-20 15:43:01 +0000
+Started GET "/books/new" for ::1 at 2021-01-20 16:59:37 +0000
+  
+SyntaxError (/home/student/myRubyApps/rubyOnRails/bookstore_app/app/controllers/books_controller.rb:14: syntax error, unexpected symbol literal
+...mit(:title, :price, :book_id. :publisher, :description, :num...
+...                              ^
+):
+  
+app/controllers/books_controller.rb:14: syntax error, unexpected symbol literal
+app/controllers/books_controller.rb:14: syntax error, unexpected symbol literal
+app/controllers/books_controller.rb:14: syntax error, unexpected symbol literal
+Started GET "/books/new" for ::1 at 2021-01-20 17:00:09 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+SyntaxError (/home/student/myRubyApps/rubyOnRails/bookstore_app/app/controllers/books_controller.rb:14: syntax error, unexpected symbol literal
+...mit(:title, :price, :book_id. :publisher, :description, :num...
+...                              ^
+):
+  
+app/controllers/books_controller.rb:14: syntax error, unexpected symbol literal
+app/controllers/books_controller.rb:14: syntax error, unexpected symbol literal
+app/controllers/books_controller.rb:14: syntax error, unexpected symbol literal
+Started GET "/books/new" for ::1 at 2021-01-20 17:03:25 +0000
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+SyntaxError (/home/student/myRubyApps/rubyOnRails/bookstore_app/app/controllers/books_controller.rb:14: syntax error, unexpected symbol literal
+...mit(:title, :price, :book_id. :publisher, :description, :num...
+...                              ^
+):
+  
+app/controllers/books_controller.rb:14: syntax error, unexpected symbol literal
+app/controllers/books_controller.rb:14: syntax error, unexpected symbol literal
+app/controllers/books_controller.rb:14: syntax error, unexpected symbol literal
+Started GET "/books/new" for ::1 at 2021-01-20 17:06:20 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 23.3ms | Allocations: 2801)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 135.6ms | Allocations: 8791)
+Completed 200 OK in 193ms (Views: 171.2ms | ActiveRecord: 0.0ms | Allocations: 11400)
+
+
+Started POST "/books" for ::1 at 2021-01-20 17:06:50 +0000
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"Steve", "price"=>"2", "book_id"=>"3", "publisher"=>"Sal", "description"=>"Big Book", "number"=>"1"}, "commit"=>"Save Book"}
+Completed 500 Internal Server Error in 143ms (ActiveRecord: 39.1ms | Allocations: 7732)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'number' for Book.):
+  
+app/controllers/books_controller.rb:8:in `create'
+Started GET "/books/new" for ::1 at 2021-01-20 17:08:54 +0000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 2800)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 105.3ms | Allocations: 8790)
+Completed 200 OK in 173ms (Views: 141.8ms | ActiveRecord: 0.0ms | Allocations: 11399)
+
+
+Started POST "/books" for ::1 at 2021-01-20 17:08:58 +0000
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"Steve", "price"=>"2", "book_id"=>"3", "publisher"=>"Sal", "description"=>"Big Book", "number"=>"1"}, "commit"=>"Save Book"}
+Completed 500 Internal Server Error in 103ms (ActiveRecord: 16.2ms | Allocations: 5624)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'number' for Book.):
+  
+app/controllers/books_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('386464997076477690', 0)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateBooks (20210120171134)
+  [1m[35m (70.8ms)[0m  [1m[35mCREATE TABLE `books` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `price` float(24), `book_id` varchar(255), `publisher` varchar(255), `description` text, `number` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (4.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210120171134')[0m
+  [1m[36mTRANSACTION (19.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (7.0ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('386464997076477690')[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/books/new" for ::1 at 2021-01-20 17:12:17 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 2800)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 94.8ms | Allocations: 8790)
+Completed 200 OK in 147ms (Views: 128.3ms | ActiveRecord: 0.0ms | Allocations: 11399)
+
+
+Started POST "/books" for ::1 at 2021-01-20 17:12:21 +0000
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"Steve", "price"=>"2", "book_id"=>"3", "publisher"=>"Sal", "description"=>"Big Book", "number"=>"1"}, "commit"=>"Save Book"}
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:9:in `create'
+  [1m[36mBook Create (1.0ms)[0m  [1m[32mINSERT INTO `books` (`title`, `price`, `book_id`, `publisher`, `description`, `number`, `created_at`, `updated_at`) VALUES ('Steve', 2.0, '3', 'Sal', 'Big Book', 1, '2021-01-20 17:12:21.450269', '2021-01-20 17:12:21.450269')[0m
+  ↳ app/controllers/books_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (23.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:9:in `create'
+Redirected to http://localhost:3000/books/1
+Completed 302 Found in 166ms (ActiveRecord: 33.5ms | Allocations: 8144)
+
+
+Started GET "/books/1" for ::1 at 2021-01-20 17:12:21 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (2.0ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/books_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 8.2ms | Allocations: 218)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.6ms | Allocations: 3792)
+Completed 200 OK in 54ms (Views: 36.0ms | ActiveRecord: 2.0ms | Allocations: 5306)
+
+
+Started GET "/books" for ::1 at 2021-01-20 17:18:59 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.5ms)[0m  [1m[34mSELECT `books`.* FROM `books`[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 69.5ms | Allocations: 6232)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 194.9ms | Allocations: 12229)
+Completed 200 OK in 239ms (Views: 204.5ms | ActiveRecord: 4.3ms | Allocations: 15104)
+
+
+Started GET "/books" for ::1 at 2021-01-20 17:20:33 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT `books`.* FROM `books`[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 40.8ms | Allocations: 6313)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 101.1ms | Allocations: 12310)
+Completed 200 OK in 113ms (Views: 95.8ms | ActiveRecord: 8.1ms | Allocations: 15185)
+
+
+Started GET "/books/1" for ::1 at 2021-01-20 17:20:37 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (3.5ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/books_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 208)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 47.9ms | Allocations: 3773)
+Completed 200 OK in 112ms (Views: 54.3ms | ActiveRecord: 3.5ms | Allocations: 5885)
+
+
+Started GET "/books" for ::1 at 2021-01-20 17:31:38 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT `books`.* FROM `books`[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 17.3ms | Allocations: 6311)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 82.5ms | Allocations: 13627)
+Completed 500 Internal Server Error in 113ms (ActiveRecord: 3.0ms | Allocations: 16468)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"books"}, missing required keys: [:id]
+Did you mean?  book_url
+               books_url
+               books_path
+               new_book_url):
+    24:         <a class="p-2 text-dark" href="#"> <%= link_to "About Us", '#' %> </a>
+    25:         <a class="p-2 text-dark" href="#"> <%= link_to "Contact Us", '#' %> </a>
+    26:         <a class="p-2 text-dark" href="#"> <%= link_to "Add New Book", new_book_path %> </a>
+    27:         <a class="p-2 text-dark" href="#"> <%= link_to "Show All Books", book_path %> </a>
+    28:       </nav>
+    29: 
+    30:       
+  
+app/views/layouts/application.html.erb:27
+Started GET "/" for ::1 at 2021-01-20 17:33:11 +0000
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
 Processing by StaticPagesController#home as HTML
   Rendering layout layouts/application.html.erb
   Rendering static_pages/home.html.erb within layouts/application
-  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 229)
 [Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layout layouts/application.html.erb (Duration: 37.7ms | Allocations: 3537)
-Completed 200 OK in 58ms (Views: 57.5ms | ActiveRecord: 0.0ms | Allocations: 3914)
+  Rendered layout layouts/application.html.erb (Duration: 37.2ms | Allocations: 6328)
+Completed 200 OK in 76ms (Views: 61.2ms | ActiveRecord: 0.0ms | Allocations: 8938)
 
 
-Started GET "/static_pages/home" for ::1 at 2021-01-20 15:43:02 +0000
-Processing by StaticPagesController#home as HTML
+Started GET "/books/new" for ::1 at 2021-01-20 17:33:14 +0000
+Processing by BooksController#new as HTML
   Rendering layout layouts/application.html.erb
-  Rendering static_pages/home.html.erb within layouts/application
-  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 24.4ms | Allocations: 2659)
 [Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layout layouts/application.html.erb (Duration: 34.6ms | Allocations: 3539)
-Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.0ms | Allocations: 3921)
+  Rendered layout layouts/application.html.erb (Duration: 68.0ms | Allocations: 6254)
+Completed 200 OK in 81ms (Views: 78.5ms | ActiveRecord: 0.0ms | Allocations: 7137)
 
 
-Started GET "/static_pages/home" for ::1 at 2021-01-20 15:43:03 +0000
-Processing by StaticPagesController#home as HTML
+Started GET "/books" for ::1 at 2021-01-20 17:33:15 +0000
+Processing by BooksController#index as HTML
   Rendering layout layouts/application.html.erb
-  Rendering static_pages/home.html.erb within layouts/application
-  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 37)
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.8ms)[0m  [1m[34mSELECT `books`.* FROM `books`[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 39.6ms | Allocations: 6194)
 [Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layout layouts/application.html.erb (Duration: 32.4ms | Allocations: 3539)
-Completed 200 OK in 38ms (Views: 37.2ms | ActiveRecord: 0.0ms | Allocations: 3921)
+  Rendered layout layouts/application.html.erb (Duration: 55.1ms | Allocations: 9802)
+Completed 200 OK in 71ms (Views: 53.2ms | ActiveRecord: 6.3ms | Allocations: 10589)
 
 
-Started GET "/static_pages/home" for ::1 at 2021-01-20 15:43:03 +0000
-Processing by StaticPagesController#home as HTML
+Started GET "/books/new" for ::1 at 2021-01-20 17:33:16 +0000
+Processing by BooksController#new as HTML
   Rendering layout layouts/application.html.erb
-  Rendering static_pages/home.html.erb within layouts/application
-  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 37)
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 12.0ms | Allocations: 810)
 [Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layout layouts/application.html.erb (Duration: 25.6ms | Allocations: 3537)
-Completed 200 OK in 40ms (Views: 39.3ms | ActiveRecord: 0.0ms | Allocations: 3914)
+  Rendered layout layouts/application.html.erb (Duration: 45.0ms | Allocations: 4401)
+Completed 200 OK in 57ms (Views: 53.0ms | ActiveRecord: 0.0ms | Allocations: 5384)
 
 
-Started GET "/static_pages/home" for ::1 at 2021-01-20 15:43:04 +0000
-Processing by StaticPagesController#home as HTML
+Started GET "/books" for ::1 at 2021-01-20 17:33:18 +0000
+Processing by BooksController#index as HTML
   Rendering layout layouts/application.html.erb
-  Rendering static_pages/home.html.erb within layouts/application
-  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.2ms)[0m  [1m[34mSELECT `books`.* FROM `books`[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 11.0ms | Allocations: 780)
 [Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layout layouts/application.html.erb (Duration: 24.6ms | Allocations: 3537)
-Completed 200 OK in 34ms (Views: 27.9ms | ActiveRecord: 0.0ms | Allocations: 3914)
+  Rendered layout layouts/application.html.erb (Duration: 48.6ms | Allocations: 4963)
+Completed 200 OK in 53ms (Views: 50.9ms | ActiveRecord: 1.2ms | Allocations: 5359)
 
 
-Started GET "/static_pages/home" for ::1 at 2021-01-20 15:43:04 +0000
-Processing by StaticPagesController#home as HTML
+Started GET "/books" for ::1 at 2021-01-20 17:33:19 +0000
+Processing by BooksController#index as HTML
   Rendering layout layouts/application.html.erb
-  Rendering static_pages/home.html.erb within layouts/application
-  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 37)
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (5.0ms)[0m  [1m[34mSELECT `books`.* FROM `books`[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 11.3ms | Allocations: 773)
 [Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 3537)
-Completed 200 OK in 36ms (Views: 35.1ms | ActiveRecord: 0.0ms | Allocations: 3914)
+  Rendered layout layouts/application.html.erb (Duration: 32.6ms | Allocations: 4365)
+Completed 200 OK in 63ms (Views: 48.8ms | ActiveRecord: 5.0ms | Allocations: 4755)
 
 
-Started GET "/static_pages/home" for ::1 at 2021-01-20 15:43:04 +0000
-Processing by StaticPagesController#home as HTML
+Started GET "/books" for ::1 at 2021-01-20 17:33:19 +0000
+Processing by BooksController#index as HTML
   Rendering layout layouts/application.html.erb
-  Rendering static_pages/home.html.erb within layouts/application
-  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.9ms)[0m  [1m[34mSELECT `books`.* FROM `books`[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 15.1ms | Allocations: 773)
 [Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layout layouts/application.html.erb (Duration: 27.1ms | Allocations: 3537)
-Completed 200 OK in 39ms (Views: 38.2ms | ActiveRecord: 0.0ms | Allocations: 3914)
-
-
-Started GET "/static_pages/home" for ::1 at 2021-01-20 15:43:05 +0000
-Processing by StaticPagesController#home as HTML
-  Rendering layout layouts/application.html.erb
-  Rendering static_pages/home.html.erb within layouts/application
-  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layout layouts/application.html.erb (Duration: 20.7ms | Allocations: 3545)
-Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.0ms | Allocations: 3924)
-
-
-Started GET "/static_pages/home" for ::1 at 2021-01-20 15:43:05 +0000
-Processing by StaticPagesController#home as HTML
-  Rendering layout layouts/application.html.erb
-  Rendering static_pages/home.html.erb within layouts/application
-  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layout layouts/application.html.erb (Duration: 29.5ms | Allocations: 3537)
-Completed 200 OK in 37ms (Views: 33.0ms | ActiveRecord: 0.0ms | Allocations: 3914)
-
-
-Started GET "/static_pages/home" for ::1 at 2021-01-20 15:44:37 +0000
-  [1m[35m (6.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-Processing by StaticPagesController#home as HTML
-  Rendering layout layouts/application.html.erb
-  Rendering static_pages/home.html.erb within layouts/application
-  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 229)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layout layouts/application.html.erb (Duration: 51.1ms | Allocations: 5864)
-Completed 200 OK in 70ms (Views: 58.8ms | ActiveRecord: 0.0ms | Allocations: 8462)
-
-
-Started GET "/static_pages/home" for ::1 at 2021-01-20 15:44:43 +0000
-Processing by StaticPagesController#home as HTML
-  Rendering layout layouts/application.html.erb
-  Rendering static_pages/home.html.erb within layouts/application
-  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layout layouts/application.html.erb (Duration: 69.0ms | Allocations: 3540)
-Completed 200 OK in 80ms (Views: 79.1ms | ActiveRecord: 0.0ms | Allocations: 3920)
+  Rendered layout layouts/application.html.erb (Duration: 56.4ms | Allocations: 4365)
+Completed 200 OK in 82ms (Views: 79.6ms | ActiveRecord: 1.9ms | Allocations: 4756)
 
 
