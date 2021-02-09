@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_20_171134) do
+ActiveRecord::Schema.define(version: 2021_02_02_145501) do
+
+  create_table "authors", charset: "utf8mb4", force: :cascade do |t|
+    t.string "fname"
+    t.string "lname"
+    t.text "bio"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "books", charset: "utf8mb4", force: :cascade do |t|
     t.string "title"
@@ -19,6 +27,43 @@ ActiveRecord::Schema.define(version: 2021_01_20_171134) do
     t.string "publisher"
     t.text "description"
     t.integer "number"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "genres", charset: "utf8mb4", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "novels", charset: "utf8mb4", force: :cascade do |t|
+    t.string "title"
+    t.integer "genre_id"
+    t.integer "author_id"
+    t.integer "publisher_id"
+    t.string "isbn"
+    t.float "price"
+    t.date "publication"
+    t.string "format"
+    t.text "description"
+    t.integer "pages"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "publishers", charset: "utf8mb4", force: :cascade do |t|
+    t.string "name"
+    t.string "country"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "users", charset: "utf8mb4", force: :cascade do |t|
+    t.string "fullname"
+    t.string "email"
+    t.string "user_id"
+    t.integer "age"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

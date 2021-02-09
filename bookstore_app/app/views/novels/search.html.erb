@@ -1,0 +1,40 @@
+<div class="container">
+<%= form_tag search_novels_path, method: :get do %>
+    <%= text_field_tag :term, nil, placeholder: 'Search Novels', class:'form-control' %>
+    <%= submit_tag "Search", class:'btn btn-default' %>
+<h2> Novels Available </h2>
+<table border="1" class="table">
+<tr>
+<th>Novel Title</th>
+<th>Novel Genre ID</th>
+<th>Novel Author ID</th>
+<th>Novel Publisher ID</th>
+<th>Novel ISBN</th>
+<th>Novel Price</th>
+<th>Novel Publication</th>
+<th>Novel Format</th>
+<th>Novel Description</th>
+<th>Novel Pages</th>
+</tr>
+<% @novels.each do |novel| %>
+<tr>
+<td> <%= novel.title %> </td>
+<td> <%= novel.genre_id %> </td>
+<td> <%= novel.author_id %> </td>
+<td> <%= novel.publisher_id %> </td>
+<td> <%= novel.isbn %> </td>
+<td> <%= novel.price %> </td>
+<td> <%= novel.publication %> </td>
+<td> <%= novel.format %> </td>
+<td> <%= novel.description %> </td>
+<td> <%= novel.pages %> </td>
+<td> <%= link_to 'Novel Page', novel_path(novel) %> </td>
+<td> <%= link_to 'Edit Novel', edit_novel_path(novel) %> </td>
+<td> <%= link_to 'Delete Novel', novel_path(novel),
+method: :Delete,
+data: {confirm: "Are you sure you want to delete this Novel?"}
+%> </td>
+</tr>
+<% end %>
+</table>
+</div>
