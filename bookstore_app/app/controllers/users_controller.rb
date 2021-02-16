@@ -1,19 +1,19 @@
 class UsersController < ApplicationController
     def index
-    @users=User.all 
     end
     def new
     end
-    def show
-    @user=User.find(params[:id])
-    end
     def create
-    @user=User.new(user_params)
-    @user.save
-    redirect_to @user
+        @user=User.new(user_params)
+        if @user.save
+            redirect_to static_pages_home, notice:
+            "Welcome #{@user.userid}! to Sheffield Book Store"
+        else
+            render 'new'
+        end
     end
     private
     def user_params
-    params.require(:user).permit(:fullname, :email, :user_id, :age)
+    params.require(:user).permit(:userid, :email, :password, :password_confirmation)
     end
 end

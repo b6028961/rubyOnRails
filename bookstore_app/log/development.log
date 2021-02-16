@@ -3938,3 +3938,990 @@ Processing by NovelsController#new as HTML
 Completed 200 OK in 120ms (Views: 109.2ms | ActiveRecord: 9.6ms | Allocations: 8487)
 
 
+Started GET "/" for ::1 at 2021-02-09 15:08:08 +0000
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 6.2ms | Allocations: 229)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 197.6ms | Allocations: 8562)
+Completed 200 OK in 250ms (Views: 207.7ms | ActiveRecord: 0.0ms | Allocations: 11181)
+
+
+Started GET "/novels/new" for ::1 at 2021-02-09 15:08:10 +0000
+Processing by NovelsController#new as HTML
+Completed 400 Bad Request in 7ms (ActiveRecord: 0.0ms | Allocations: 1975)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: novel
+Did you mean?  controller
+               action):
+  
+app/controllers/novels_controller.rb:26:in `novel_params'
+app/controllers/novels_controller.rb:6:in `new'
+Started GET "/novels/new" for ::1 at 2021-02-09 15:09:23 +0000
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+SyntaxError (/home/student/myRubyApps/rubyOnRails/bookstore_app/app/controllers/novels_controller.rb:51: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/novels_controller.rb:51: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/novels_controller.rb:51: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/novels_controller.rb:51: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/novels/new" for ::1 at 2021-02-09 15:10:25 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by NovelsController#new as HTML
+Completed 400 Bad Request in 54ms (ActiveRecord: 0.0ms | Allocations: 2887)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: novel
+Did you mean?  controller
+               action):
+  
+app/controllers/novels_controller.rb:26:in `novel_params'
+app/controllers/novels_controller.rb:6:in `new'
+Started GET "/novels/new" for ::1 at 2021-02-09 15:16:21 +0000
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by NovelsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering novels/new.html.erb within layouts/application
+  [1m[36mGenre Load (2.4ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+  ↳ app/views/novels/new.html.erb:10:in `collect'
+  [1m[36mPublisher Load (25.8ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers`[0m
+  ↳ app/views/novels/new.html.erb:17:in `collect'
+  [1m[36mAuthor Load (10.5ms)[0m  [1m[34mSELECT `authors`.* FROM `authors`[0m
+  ↳ app/views/novels/new.html.erb:23:in `collect'
+  Rendered novels/new.html.erb within layouts/application (Duration: 278.4ms | Allocations: 16752)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 359.5ms | Allocations: 24994)
+Completed 200 OK in 414ms (Views: 324.8ms | ActiveRecord: 52.0ms | Allocations: 27669)
+
+
+Started POST "/novels" for ::1 at 2021-02-09 15:16:32 +0000
+Processing by NovelsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "novel"=>{"title"=>"ddd", "genre_id"=>"1", "publisher_id"=>"1", "author_id"=>"1", "price"=>"", "publication"=>"2021-02-05", "format"=>"", "isbn"=>"", "description"=>"", "pages"=>""}, "commit"=>"Submit"}
+[31mUnpermitted parameter: :publisher_id[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/novels_controller.rb:12:in `create'
+  [1m[36mAuthor Load (1.1ms)[0m  [1m[34mSELECT `authors`.* FROM `authors` WHERE `authors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/novels_controller.rb:12:in `create'
+  [1m[36mGenre Load (1.1ms)[0m  [1m[34mSELECT `genres`.* FROM `genres` WHERE `genres`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/novels_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/novels_controller.rb:12:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering novels/new.html.erb within layouts/application
+  [1m[36mGenre Load (0.9ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+  ↳ app/views/novels/new.html.erb:10:in `collect'
+  [1m[36mPublisher Load (4.8ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers`[0m
+  ↳ app/views/novels/new.html.erb:17:in `collect'
+  [1m[36mAuthor Load (8.9ms)[0m  [1m[34mSELECT `authors`.* FROM `authors`[0m
+  ↳ app/views/novels/new.html.erb:23:in `collect'
+  Rendered novels/new.html.erb within layouts/application (Duration: 49.2ms | Allocations: 5063)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 62.6ms | Allocations: 9063)
+Completed 200 OK in 261ms (Views: 54.2ms | ActiveRecord: 31.2ms | Allocations: 23814)
+
+
+Started POST "/novels" for ::1 at 2021-02-09 15:16:35 +0000
+Processing by NovelsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "novel"=>{"title"=>"ddd", "genre_id"=>"1", "publisher_id"=>"", "author_id"=>"1", "price"=>"", "publication"=>"2021-02-05", "format"=>"", "isbn"=>"", "description"=>"", "pages"=>""}, "commit"=>"Submit"}
+[31mUnpermitted parameter: :publisher_id[0m
+  [1m[36mTRANSACTION (15.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/novels_controller.rb:12:in `create'
+  [1m[36mAuthor Load (7.8ms)[0m  [1m[34mSELECT `authors`.* FROM `authors` WHERE `authors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/novels_controller.rb:12:in `create'
+  [1m[36mGenre Load (0.9ms)[0m  [1m[34mSELECT `genres`.* FROM `genres` WHERE `genres`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/novels_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/novels_controller.rb:12:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering novels/new.html.erb within layouts/application
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+  ↳ app/views/novels/new.html.erb:10:in `collect'
+  [1m[36mPublisher Load (3.9ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers`[0m
+  ↳ app/views/novels/new.html.erb:17:in `collect'
+  [1m[36mAuthor Load (5.8ms)[0m  [1m[34mSELECT `authors`.* FROM `authors`[0m
+  ↳ app/views/novels/new.html.erb:23:in `collect'
+  Rendered novels/new.html.erb within layouts/application (Duration: 73.5ms | Allocations: 4643)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 91.9ms | Allocations: 8643)
+Completed 200 OK in 176ms (Views: 85.2ms | ActiveRecord: 37.1ms | Allocations: 13016)
+
+
+Started POST "/novels" for ::1 at 2021-02-09 15:16:36 +0000
+Processing by NovelsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "novel"=>{"title"=>"ddd", "genre_id"=>"1", "publisher_id"=>"", "author_id"=>"1", "price"=>"", "publication"=>"2021-02-05", "format"=>"", "isbn"=>"", "description"=>"", "pages"=>""}, "commit"=>"Submit"}
+[31mUnpermitted parameter: :publisher_id[0m
+  [1m[36mTRANSACTION (12.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/novels_controller.rb:12:in `create'
+  [1m[36mAuthor Load (2.3ms)[0m  [1m[34mSELECT `authors`.* FROM `authors` WHERE `authors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/novels_controller.rb:12:in `create'
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT `genres`.* FROM `genres` WHERE `genres`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/novels_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/novels_controller.rb:12:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering novels/new.html.erb within layouts/application
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+  ↳ app/views/novels/new.html.erb:10:in `collect'
+  [1m[36mPublisher Load (5.3ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers`[0m
+  ↳ app/views/novels/new.html.erb:17:in `collect'
+  [1m[36mAuthor Load (1.8ms)[0m  [1m[34mSELECT `authors`.* FROM `authors`[0m
+  ↳ app/views/novels/new.html.erb:23:in `collect'
+  Rendered novels/new.html.erb within layouts/application (Duration: 63.3ms | Allocations: 4643)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 105.8ms | Allocations: 8643)
+Completed 200 OK in 184ms (Views: 101.6ms | ActiveRecord: 26.0ms | Allocations: 13020)
+
+
+Started POST "/novels" for ::1 at 2021-02-09 15:16:40 +0000
+Processing by NovelsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "novel"=>{"title"=>"ddd", "genre_id"=>"1", "publisher_id"=>"1", "author_id"=>"1", "price"=>"", "publication"=>"2021-02-05", "format"=>"", "isbn"=>"", "description"=>"", "pages"=>""}, "commit"=>"Submit"}
+[31mUnpermitted parameter: :publisher_id[0m
+  [1m[36mTRANSACTION (15.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/novels_controller.rb:12:in `create'
+  [1m[36mAuthor Load (5.9ms)[0m  [1m[34mSELECT `authors`.* FROM `authors` WHERE `authors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/novels_controller.rb:12:in `create'
+  [1m[36mGenre Load (0.8ms)[0m  [1m[34mSELECT `genres`.* FROM `genres` WHERE `genres`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/novels_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (10.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/novels_controller.rb:12:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering novels/new.html.erb within layouts/application
+  [1m[36mGenre Load (2.0ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+  ↳ app/views/novels/new.html.erb:10:in `collect'
+  [1m[36mPublisher Load (3.9ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers`[0m
+  ↳ app/views/novels/new.html.erb:17:in `collect'
+  [1m[36mAuthor Load (5.2ms)[0m  [1m[34mSELECT `authors`.* FROM `authors`[0m
+  ↳ app/views/novels/new.html.erb:23:in `collect'
+  Rendered novels/new.html.erb within layouts/application (Duration: 46.7ms | Allocations: 4643)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 80.4ms | Allocations: 8643)
+Completed 200 OK in 170ms (Views: 76.9ms | ActiveRecord: 43.5ms | Allocations: 13015)
+
+
+Started GET "/novels" for ::1 at 2021-02-09 15:16:42 +0000
+Processing by NovelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering novels/index.html.erb within layouts/application
+  [1m[36mNovel Load (4.6ms)[0m  [1m[34mSELECT `novels`.* FROM `novels`[0m
+  ↳ app/views/novels/index.html.erb:16
+  Rendered novels/index.html.erb within layouts/application (Duration: 21.4ms | Allocations: 1039)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 50.5ms | Allocations: 5218)
+Completed 200 OK in 70ms (Views: 61.5ms | ActiveRecord: 4.6ms | Allocations: 5824)
+
+
+Started GET "/" for ::1 at 2021-02-09 15:20:01 +0000
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 8.6ms | Allocations: 229)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 127.7ms | Allocations: 8561)
+Completed 200 OK in 201ms (Views: 149.7ms | ActiveRecord: 0.0ms | Allocations: 11180)
+
+
+Started GET "/novels/new" for ::1 at 2021-02-09 15:20:04 +0000
+Processing by NovelsController#new as HTML
+Completed 400 Bad Request in 30ms (ActiveRecord: 0.0ms | Allocations: 1975)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: novel
+Did you mean?  controller
+               action):
+  
+app/controllers/novels_controller.rb:20:in `novel_params'
+app/controllers/novels_controller.rb:6:in `new'
+Started GET "/novels/new" for ::1 at 2021-02-09 15:22:05 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by NovelsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering novels/new.html.erb within layouts/application
+  [1m[36mGenre Load (1.1ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+  ↳ app/views/novels/new.html.erb:10:in `collect'
+  [1m[36mPublisher Load (13.2ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers`[0m
+  ↳ app/views/novels/new.html.erb:17:in `collect'
+  [1m[36mAuthor Load (1.1ms)[0m  [1m[34mSELECT `authors`.* FROM `authors`[0m
+  ↳ app/views/novels/new.html.erb:23:in `collect'
+  Rendered novels/new.html.erb within layouts/application (Duration: 232.3ms | Allocations: 16734)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 316.7ms | Allocations: 24978)
+Completed 200 OK in 366ms (Views: 294.4ms | ActiveRecord: 33.6ms | Allocations: 27653)
+
+
+Started POST "/novels" for ::1 at 2021-02-09 15:22:13 +0000
+Processing by NovelsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "novel"=>{"title"=>"ss", "genre_id"=>"1", "publisher_id"=>"1", "author_id"=>"1", "price"=>"", "publication"=>"", "format"=>"", "isbn"=>"", "description"=>"", "pages"=>""}, "commit"=>"Submit"}
+[31mUnpermitted parameter: :publisher_id[0m
+  [1m[36mTRANSACTION (10.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/novels_controller.rb:12:in `create'
+  [1m[36mAuthor Load (1.2ms)[0m  [1m[34mSELECT `authors`.* FROM `authors` WHERE `authors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/novels_controller.rb:12:in `create'
+  [1m[36mGenre Load (2.1ms)[0m  [1m[34mSELECT `genres`.* FROM `genres` WHERE `genres`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/novels_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/novels_controller.rb:12:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering novels/new.html.erb within layouts/application
+  [1m[36mGenre Load (3.2ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+  ↳ app/views/novels/new.html.erb:10:in `collect'
+  [1m[36mPublisher Load (4.7ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers`[0m
+  ↳ app/views/novels/new.html.erb:17:in `collect'
+  [1m[36mAuthor Load (2.6ms)[0m  [1m[34mSELECT `authors`.* FROM `authors`[0m
+  ↳ app/views/novels/new.html.erb:23:in `collect'
+  Rendered novels/new.html.erb within layouts/application (Duration: 61.2ms | Allocations: 5060)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 96.3ms | Allocations: 9058)
+Completed 200 OK in 249ms (Views: 90.1ms | ActiveRecord: 29.9ms | Allocations: 23773)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('386464997076477690', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateUsers (20210209152817)
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `userid` varchar(255), `email` varchar(255), `password_digest` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('386464997076477690')[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('386464997076477690', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateUsers (20210209152817)
+  [1m[35m (96.7ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `userid` varchar(255), `email` varchar(255), `password_digest` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210209152817')[0m
+  [1m[36mTRANSACTION (32.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (12.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('386464997076477690')[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/novels/new" for ::1 at 2021-02-09 15:42:31 +0000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by NovelsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering novels/new.html.erb within layouts/application
+  [1m[36mGenre Load (6.2ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+  ↳ app/views/novels/new.html.erb:10:in `collect'
+  [1m[36mPublisher Load (5.3ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers`[0m
+  ↳ app/views/novels/new.html.erb:17:in `collect'
+  [1m[36mAuthor Load (7.4ms)[0m  [1m[34mSELECT `authors`.* FROM `authors`[0m
+  ↳ app/views/novels/new.html.erb:23:in `collect'
+  Rendered novels/new.html.erb within layouts/application (Duration: 250.2ms | Allocations: 16764)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 553.4ms | Allocations: 44708)
+Completed 200 OK in 615ms (Views: 514.0ms | ActiveRecord: 54.1ms | Allocations: 47325)
+
+
+Started POST "/novels" for ::1 at 2021-02-09 15:42:44 +0000
+Processing by NovelsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "novel"=>{"title"=>"tt", "genre_id"=>"1", "publisher_id"=>"1", "author_id"=>"1", "price"=>"4", "publication"=>"2021-02-04", "format"=>"", "isbn"=>"", "description"=>"", "pages"=>""}, "commit"=>"Submit"}
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/novels_controller.rb:12:in `create'
+  [1m[36mAuthor Load (1.7ms)[0m  [1m[34mSELECT `authors`.* FROM `authors` WHERE `authors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/novels_controller.rb:12:in `create'
+  [1m[36mGenre Load (0.8ms)[0m  [1m[34mSELECT `genres`.* FROM `genres` WHERE `genres`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/novels_controller.rb:12:in `create'
+  [1m[36mPublisher Load (2.5ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE `publishers`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/novels_controller.rb:12:in `create'
+  [1m[36mNovel Create (8.2ms)[0m  [1m[32mINSERT INTO `novels` (`title`, `genre_id`, `author_id`, `publisher_id`, `isbn`, `price`, `publication`, `format`, `description`, `created_at`, `updated_at`) VALUES ('tt', 1, 1, 1, '', 4.0, '2021-02-04', '', '', '2021-02-09 15:42:44.993570', '2021-02-09 15:42:44.993570')[0m
+  ↳ app/controllers/novels_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (19.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/novels_controller.rb:12:in `create'
+Redirected to http://localhost:3000/novels
+Completed 302 Found in 200ms (ActiveRecord: 38.5ms | Allocations: 16383)
+
+
+Started GET "/novels" for ::1 at 2021-02-09 15:42:45 +0000
+Processing by NovelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering novels/index.html.erb within layouts/application
+  [1m[36mNovel Load (2.1ms)[0m  [1m[34mSELECT `novels`.* FROM `novels`[0m
+  ↳ app/views/novels/index.html.erb:16
+  Rendered novels/index.html.erb within layouts/application (Duration: 24.7ms | Allocations: 1187)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 47.6ms | Allocations: 5326)
+Completed 200 OK in 57ms (Views: 54.2ms | ActiveRecord: 2.1ms | Allocations: 5846)
+
+
+Started GET "/novels/1" for ::1 at 2021-02-09 15:42:47 +0000
+Processing by NovelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNovel Load (0.9ms)[0m  [1m[34mSELECT `novels`.* FROM `novels` WHERE `novels`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/novels_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering novels/show.html.erb within layouts/application
+  Rendered novels/show.html.erb within layouts/application (Duration: 58.3ms | Allocations: 4550)
+  Rendered layout layouts/application.html.erb (Duration: 71.2ms | Allocations: 5223)
+Completed 500 Internal Server Error in 98ms (ActiveRecord: 0.9ms | Allocations: 6431)
+
+
+  
+ActionView::Template::Error (undefined method `publication_id' for #<Novel:0x0000555cae87c688>
+Did you mean?  publication
+               publication?
+               publication=
+               publication_was):
+    3: <p>Novel Title: <%= @novel.title %> </p>
+    4: <p>Novel GenreID:<%= @novel.genre_id %> </p>
+    5: <p>Novel AuthorID: <%= @novel.author_id %> </p>
+    6: <p>Novel PublicationID: <%= @novel.publication_id %> </p>
+    7: <p>Novel ISBN: <%= @novel.isbn %> </p>
+    8: <p>Novel Price: <%= @novel.price %> </p>
+    9: <p>Novel Publication: <%= @novel.publication %> </p>
+  
+app/views/novels/show.html.erb:6
+Started GET "/novels/1" for ::1 at 2021-02-09 15:43:48 +0000
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by NovelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNovel Load (0.7ms)[0m  [1m[34mSELECT `novels`.* FROM `novels` WHERE `novels`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/novels_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering novels/show.html.erb within layouts/application
+  Rendered novels/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 399)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 83.5ms | Allocations: 8680)
+Completed 200 OK in 279ms (Views: 93.5ms | ActiveRecord: 10.3ms | Allocations: 20347)
+
+
+Started GET "/novels" for ::1 at 2021-02-09 15:43:51 +0000
+Processing by NovelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering novels/index.html.erb within layouts/application
+  [1m[36mNovel Load (0.9ms)[0m  [1m[34mSELECT `novels`.* FROM `novels`[0m
+  ↳ app/views/novels/index.html.erb:16
+  Rendered novels/index.html.erb within layouts/application (Duration: 43.5ms | Allocations: 1783)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 77.0ms | Allocations: 5880)
+Completed 200 OK in 86ms (Views: 84.0ms | ActiveRecord: 0.9ms | Allocations: 6410)
+
+
+Started GET "/novels/1/edit" for ::1 at 2021-02-09 15:43:52 +0000
+Processing by NovelsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering novels/edit.html.erb within layouts/application
+  Rendered novels/edit.html.erb within layouts/application (Duration: 16.7ms | Allocations: 1758)
+  Rendered layout layouts/application.html.erb (Duration: 32.9ms | Allocations: 2424)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.0ms | Allocations: 2879)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <div class="container">
+    2: <h1> Edit Novel Details</h1>
+    3: <%= form_for @novel do |f| %>
+    4:     <div class="form-group">
+    5:     <%= f.label :title %><br />
+    6:     <%= f.text_field :title, class:'form-control' %><br />
+  
+app/views/novels/edit.html.erb:3
+Started GET "/novels" for ::1 at 2021-02-09 15:44:26 +0000
+Processing by NovelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering novels/index.html.erb within layouts/application
+  [1m[36mNovel Load (1.6ms)[0m  [1m[34mSELECT `novels`.* FROM `novels`[0m
+  ↳ app/views/novels/index.html.erb:16
+  Rendered novels/index.html.erb within layouts/application (Duration: 23.2ms | Allocations: 963)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 62.5ms | Allocations: 5206)
+Completed 200 OK in 80ms (Views: 77.7ms | ActiveRecord: 1.6ms | Allocations: 5709)
+
+
+Started GET "/novels/new" for ::1 at 2021-02-09 15:44:29 +0000
+Processing by NovelsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering novels/new.html.erb within layouts/application
+  [1m[36mGenre Load (2.9ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+  ↳ app/views/novels/new.html.erb:10:in `collect'
+  [1m[36mPublisher Load (1.0ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers`[0m
+  ↳ app/views/novels/new.html.erb:17:in `collect'
+  [1m[36mAuthor Load (0.9ms)[0m  [1m[34mSELECT `authors`.* FROM `authors`[0m
+  ↳ app/views/novels/new.html.erb:23:in `collect'
+  Rendered novels/new.html.erb within layouts/application (Duration: 207.9ms | Allocations: 18969)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 241.3ms | Allocations: 22990)
+Completed 200 OK in 250ms (Views: 219.9ms | ActiveRecord: 28.6ms | Allocations: 23494)
+
+
+Started GET "/novels" for ::1 at 2021-02-09 15:45:05 +0000
+Processing by NovelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering novels/index.html.erb within layouts/application
+  [1m[36mNovel Load (5.5ms)[0m  [1m[34mSELECT `novels`.* FROM `novels`[0m
+  ↳ app/views/novels/index.html.erb:16
+  Rendered novels/index.html.erb within layouts/application (Duration: 17.8ms | Allocations: 843)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 72.2ms | Allocations: 4920)
+Completed 200 OK in 86ms (Views: 79.9ms | ActiveRecord: 5.5ms | Allocations: 5311)
+
+
+Started DELETE "/novels/1" for ::1 at 2021-02-09 15:45:12 +0000
+Processing by NovelsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering novels/destroy.html.erb within layouts/application
+  Rendered novels/destroy.html.erb within layouts/application (Duration: 0.7ms | Allocations: 109)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 38.9ms | Allocations: 4229)
+Completed 200 OK in 54ms (Views: 53.3ms | ActiveRecord: 0.0ms | Allocations: 4752)
+
+
+Started GET "/novels" for ::1 at 2021-02-09 15:45:16 +0000
+Processing by NovelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering novels/index.html.erb within layouts/application
+  [1m[36mNovel Load (14.0ms)[0m  [1m[34mSELECT `novels`.* FROM `novels`[0m
+  ↳ app/views/novels/index.html.erb:16
+  Rendered novels/index.html.erb within layouts/application (Duration: 48.0ms | Allocations: 1450)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 79.5ms | Allocations: 5527)
+Completed 200 OK in 93ms (Views: 77.7ms | ActiveRecord: 14.0ms | Allocations: 5918)
+
+
+Started GET "/novels/new" for ::1 at 2021-02-09 15:45:17 +0000
+Processing by NovelsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering novels/new.html.erb within layouts/application
+  [1m[36mGenre Load (3.6ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+  ↳ app/views/novels/new.html.erb:10:in `collect'
+  [1m[36mPublisher Load (6.0ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers`[0m
+  ↳ app/views/novels/new.html.erb:17:in `collect'
+  [1m[36mAuthor Load (3.7ms)[0m  [1m[34mSELECT `authors`.* FROM `authors`[0m
+  ↳ app/views/novels/new.html.erb:23:in `collect'
+  Rendered novels/new.html.erb within layouts/application (Duration: 67.3ms | Allocations: 4017)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 94.9ms | Allocations: 8093)
+Completed 200 OK in 122ms (Views: 99.1ms | ActiveRecord: 13.3ms | Allocations: 8470)
+
+
+Started GET "/novels" for ::1 at 2021-02-09 15:45:18 +0000
+Processing by NovelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering novels/index.html.erb within layouts/application
+  [1m[36mNovel Load (3.4ms)[0m  [1m[34mSELECT `novels`.* FROM `novels`[0m
+  ↳ app/views/novels/index.html.erb:16
+  Rendered novels/index.html.erb within layouts/application (Duration: 20.2ms | Allocations: 848)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 61.8ms | Allocations: 4925)
+Completed 200 OK in 73ms (Views: 69.3ms | ActiveRecord: 3.4ms | Allocations: 5321)
+
+
+Started GET "/novels/new" for ::1 at 2021-02-09 15:45:19 +0000
+Processing by NovelsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering novels/new.html.erb within layouts/application
+  [1m[36mGenre Load (1.2ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+  ↳ app/views/novels/new.html.erb:10:in `collect'
+  [1m[36mPublisher Load (0.9ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers`[0m
+  ↳ app/views/novels/new.html.erb:17:in `collect'
+  [1m[36mAuthor Load (1.8ms)[0m  [1m[34mSELECT `authors`.* FROM `authors`[0m
+  ↳ app/views/novels/new.html.erb:23:in `collect'
+  Rendered novels/new.html.erb within layouts/application (Duration: 64.2ms | Allocations: 3424)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 133.2ms | Allocations: 8106)
+Completed 200 OK in 145ms (Views: 139.8ms | ActiveRecord: 3.9ms | Allocations: 8486)
+
+
+Started GET "/novels" for ::1 at 2021-02-09 15:45:19 +0000
+Processing by NovelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering novels/index.html.erb within layouts/application
+  [1m[36mNovel Load (4.5ms)[0m  [1m[34mSELECT `novels`.* FROM `novels`[0m
+  ↳ app/views/novels/index.html.erb:16
+  Rendered novels/index.html.erb within layouts/application (Duration: 15.4ms | Allocations: 841)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 88.6ms | Allocations: 5513)
+Completed 200 OK in 104ms (Views: 98.5ms | ActiveRecord: 4.5ms | Allocations: 5903)
+
+
+Started DELETE "/novels/1" for ::1 at 2021-02-09 15:45:24 +0000
+Processing by NovelsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering novels/destroy.html.erb within layouts/application
+  Rendered novels/destroy.html.erb within layouts/application (Duration: 0.3ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.4ms | Allocations: 4118)
+Completed 200 OK in 50ms (Views: 47.3ms | ActiveRecord: 0.0ms | Allocations: 4528)
+
+
+Started GET "/novels" for ::1 at 2021-02-09 15:45:27 +0000
+Processing by NovelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering novels/index.html.erb within layouts/application
+  [1m[36mNovel Load (5.1ms)[0m  [1m[34mSELECT `novels`.* FROM `novels`[0m
+  ↳ app/views/novels/index.html.erb:16
+  Rendered novels/index.html.erb within layouts/application (Duration: 16.2ms | Allocations: 841)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 75.2ms | Allocations: 5536)
+Completed 200 OK in 96ms (Views: 89.9ms | ActiveRecord: 5.1ms | Allocations: 5926)
+
+
+Started GET "/novels/new" for ::1 at 2021-02-09 15:45:28 +0000
+Processing by NovelsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering novels/new.html.erb within layouts/application
+  [1m[36mGenre Load (1.9ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+  ↳ app/views/novels/new.html.erb:10:in `collect'
+  [1m[36mPublisher Load (7.7ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers`[0m
+  ↳ app/views/novels/new.html.erb:17:in `collect'
+  [1m[36mAuthor Load (10.1ms)[0m  [1m[34mSELECT `authors`.* FROM `authors`[0m
+  ↳ app/views/novels/new.html.erb:23:in `collect'
+  Rendered novels/new.html.erb within layouts/application (Duration: 98.8ms | Allocations: 4019)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 130.7ms | Allocations: 8095)
+Completed 200 OK in 140ms (Views: 119.4ms | ActiveRecord: 19.7ms | Allocations: 8472)
+
+
+Started GET "/novels/new" for ::1 at 2021-02-09 15:59:32 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by NovelsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering novels/new.html.erb within layouts/application
+  [1m[36mGenre Load (4.3ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+  ↳ app/views/novels/new.html.erb:10:in `collect'
+  [1m[36mPublisher Load (0.9ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers`[0m
+  ↳ app/views/novels/new.html.erb:17:in `collect'
+  [1m[36mAuthor Load (17.2ms)[0m  [1m[34mSELECT `authors`.* FROM `authors`[0m
+  ↳ app/views/novels/new.html.erb:23:in `collect'
+  Rendered novels/new.html.erb within layouts/application (Duration: 251.7ms | Allocations: 16754)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 343.3ms | Allocations: 24996)
+Completed 200 OK in 412ms (Views: 314.5ms | ActiveRecord: 49.8ms | Allocations: 27671)
+
+
+Started POST "/novels" for ::1 at 2021-02-09 15:59:39 +0000
+Processing by NovelsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "novel"=>{"title"=>"ddd", "genre_id"=>"1", "publisher_id"=>"1", "author_id"=>"1", "price"=>"", "publication"=>"", "format"=>"", "isbn"=>"", "description"=>"", "pages"=>""}, "commit"=>"Submit"}
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/novels_controller.rb:12:in `create'
+  [1m[36mAuthor Load (1.1ms)[0m  [1m[34mSELECT `authors`.* FROM `authors` WHERE `authors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/novels_controller.rb:12:in `create'
+  [1m[36mGenre Load (6.2ms)[0m  [1m[34mSELECT `genres`.* FROM `genres` WHERE `genres`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/novels_controller.rb:12:in `create'
+  [1m[36mPublisher Load (1.1ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers` WHERE `publishers`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/novels_controller.rb:12:in `create'
+  [1m[36mNovel Create (7.4ms)[0m  [1m[32mINSERT INTO `novels` (`title`, `genre_id`, `author_id`, `publisher_id`, `isbn`, `format`, `description`, `created_at`, `updated_at`) VALUES ('ddd', 1, 1, 1, '', '', '', '2021-02-09 15:59:39.581465', '2021-02-09 15:59:39.581465')[0m
+  ↳ app/controllers/novels_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (28.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/novels_controller.rb:12:in `create'
+Redirected to http://localhost:3000/novels
+Completed 302 Found in 205ms (ActiveRecord: 55.5ms | Allocations: 16354)
+
+
+Started GET "/novels" for ::1 at 2021-02-09 15:59:39 +0000
+Processing by NovelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering novels/index.html.erb within layouts/application
+  [1m[36mNovel Load (3.3ms)[0m  [1m[34mSELECT `novels`.* FROM `novels`[0m
+  ↳ app/views/novels/index.html.erb:16
+  Rendered novels/index.html.erb within layouts/application (Duration: 10.8ms | Allocations: 1290)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 50.3ms | Allocations: 5387)
+Completed 200 OK in 64ms (Views: 58.1ms | ActiveRecord: 3.3ms | Allocations: 5907)
+
+
+Started GET "/novels/1/edit" for ::1 at 2021-02-09 15:59:49 +0000
+Processing by NovelsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering novels/edit.html.erb within layouts/application
+  Rendered novels/edit.html.erb within layouts/application (Duration: 23.8ms | Allocations: 1750)
+  Rendered layout layouts/application.html.erb (Duration: 35.6ms | Allocations: 1815)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.0ms | Allocations: 2270)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <div class="container">
+    2: <h1> Edit Novel Details</h1>
+    3: <%= form_for @novel do |f| %>
+    4:     <div class="form-group">
+    5:     <%= f.label :title %><br />
+    6:     <%= f.text_field :title, class:'form-control' %><br />
+  
+app/views/novels/edit.html.erb:3
+Started GET "/users/new" for ::1 at 2021-02-09 16:02:26 +0000
+  
+SyntaxError (/home/student/myRubyApps/rubyOnRails/bookstore_app/app/controllers/users_controller.rb:17: syntax error, unexpected ':', expecting ')'
+...it(:userid, :email, :password :password_confirmation)
+...                              ^
+):
+  
+app/controllers/users_controller.rb:17: syntax error, unexpected ':', expecting ')'
+app/controllers/users_controller.rb:17: syntax error, unexpected ':', expecting ')'
+app/controllers/users_controller.rb:17: syntax error, unexpected ':', expecting ')'
+Started GET "/users/new" for ::1 at 2021-02-09 16:03:01 +0000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 18.5ms | Allocations: 1735)
+  Rendered layout layouts/application.html.erb (Duration: 32.7ms | Allocations: 1804)
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 0.0ms | Allocations: 4445)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <div class="container">
+    2: <h2>Create User Account</h2>
+    3: <%= form_for @user do |f| %>
+    4:     <div class="field" style="100%">
+    5: <% if @user.errors.any? %>
+    6: <div id="error_explanation">
+  
+app/views/users/new.html.erb:3
+Started GET "/users/new" for ::1 at 2021-02-09 16:07:58 +0000
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 137.3ms | Allocations: 6436)
+  Rendered layout layouts/application.html.erb (Duration: 154.7ms | Allocations: 6505)
+Completed 500 Internal Server Error in 231ms (ActiveRecord: 22.6ms | Allocations: 9146)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    2: <h2>Create User Account</h2>
+    3: <%= form_for User.new do |f| %>
+    4:     <div class="field" style="100%">
+    5: <% if @user.errors.any? %>
+    6: <div id="error_explanation">
+    7: <h2>
+    8: <%= pluralize(@user.errors.count, "error") %>
+  
+app/views/users/new.html.erb:5
+app/views/users/new.html.erb:3
+Started GET "/users/new" for ::1 at 2021-02-09 16:13:24 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 24.0ms | Allocations: 1735)
+  Rendered layout layouts/application.html.erb (Duration: 27.4ms | Allocations: 1804)
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 0.0ms | Allocations: 4445)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <div class="container">
+    2: <h2>Create User Account</h2>
+    3: <%= form_for @user do |f| %>
+    4:     <div class="field" style="100%">
+    5: <% if @user.errors.any? %>
+    6: <div id="error_explanation">
+  
+app/views/users/new.html.erb:3
+Started GET "/" for ::1 at 2021-02-09 16:13:56 +0000
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 5.4ms | Allocations: 229)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 125.6ms | Allocations: 8546)
+Completed 200 OK in 178ms (Views: 143.2ms | ActiveRecord: 0.0ms | Allocations: 11222)
+
+
+Started GET "/novels" for ::1 at 2021-02-09 16:13:58 +0000
+Processing by NovelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering novels/index.html.erb within layouts/application
+  [1m[36mNovel Load (2.5ms)[0m  [1m[34mSELECT `novels`.* FROM `novels`[0m
+  ↳ app/views/novels/index.html.erb:16
+  Rendered novels/index.html.erb within layouts/application (Duration: 97.7ms | Allocations: 7932)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 122.0ms | Allocations: 11995)
+Completed 200 OK in 176ms (Views: 124.5ms | ActiveRecord: 11.3ms | Allocations: 14973)
+
+
+Started GET "/novels/1" for ::1 at 2021-02-09 16:14:02 +0000
+Processing by NovelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNovel Load (18.1ms)[0m  [1m[34mSELECT `novels`.* FROM `novels` WHERE `novels`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/novels_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering novels/show.html.erb within layouts/application
+  Rendered novels/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 272)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 37.3ms | Allocations: 4386)
+Completed 200 OK in 97ms (Views: 57.9ms | ActiveRecord: 18.1ms | Allocations: 6502)
+
+
+Started GET "/novels/1/edit" for ::1 at 2021-02-09 16:14:05 +0000
+Processing by NovelsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering novels/edit.html.erb within layouts/application
+  Rendered novels/edit.html.erb within layouts/application (Duration: 11.7ms | Allocations: 1760)
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 2430)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.0ms | Allocations: 2882)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <div class="container">
+    2: <h1> Edit Novel Details</h1>
+    3: <%= form_for @novel do |f| %>
+    4:     <div class="form-group">
+    5:     <%= f.label :title %><br />
+    6:     <%= f.text_field :title, class:'form-control' %><br />
+  
+app/views/novels/edit.html.erb:3
+Started GET "/novels" for ::1 at 2021-02-09 16:14:14 +0000
+Processing by NovelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering novels/index.html.erb within layouts/application
+  [1m[36mNovel Load (8.5ms)[0m  [1m[34mSELECT `novels`.* FROM `novels`[0m
+  ↳ app/views/novels/index.html.erb:16
+  Rendered novels/index.html.erb within layouts/application (Duration: 17.9ms | Allocations: 1068)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 83.3ms | Allocations: 5303)
+Completed 200 OK in 125ms (Views: 115.7ms | ActiveRecord: 8.5ms | Allocations: 5807)
+
+
+Started DELETE "/novels/1" for ::1 at 2021-02-09 16:14:17 +0000
+Processing by NovelsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering novels/destroy.html.erb within layouts/application
+  Rendered novels/destroy.html.erb within layouts/application (Duration: 0.4ms | Allocations: 106)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 35.6ms | Allocations: 4216)
+Completed 200 OK in 73ms (Views: 71.6ms | ActiveRecord: 0.0ms | Allocations: 4738)
+
+
+Started GET "/novels" for ::1 at 2021-02-09 16:14:22 +0000
+Processing by NovelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering novels/index.html.erb within layouts/application
+  [1m[36mNovel Load (1.2ms)[0m  [1m[34mSELECT `novels`.* FROM `novels`[0m
+  ↳ app/views/novels/index.html.erb:16
+  Rendered novels/index.html.erb within layouts/application (Duration: 21.5ms | Allocations: 947)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 60.7ms | Allocations: 5024)
+Completed 200 OK in 92ms (Views: 80.3ms | ActiveRecord: 1.2ms | Allocations: 6023)
+
+
+Started GET "/novels" for ::1 at 2021-02-09 16:22:18 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by NovelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering novels/index.html.erb within layouts/application
+  [1m[36mNovel Load (3.5ms)[0m  [1m[34mSELECT `novels`.* FROM `novels`[0m
+  ↳ app/views/novels/index.html.erb:16
+  Rendered novels/index.html.erb within layouts/application (Duration: 203.6ms | Allocations: 8051)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 343.1ms | Allocations: 16304)
+Completed 200 OK in 431ms (Views: 346.2ms | ActiveRecord: 26.9ms | Allocations: 20449)
+
+
+Started GET "/novels/new" for ::1 at 2021-02-09 16:22:20 +0000
+Processing by NovelsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering novels/new.html.erb within layouts/application
+  [1m[36mGenre Load (10.6ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+  ↳ app/views/novels/new.html.erb:10:in `collect'
+  [1m[36mPublisher Load (6.8ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers`[0m
+  ↳ app/views/novels/new.html.erb:17:in `collect'
+  [1m[36mAuthor Load (5.3ms)[0m  [1m[34mSELECT `authors`.* FROM `authors`[0m
+  ↳ app/views/novels/new.html.erb:23:in `collect'
+  Rendered novels/new.html.erb within layouts/application (Duration: 175.6ms | Allocations: 15740)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 210.1ms | Allocations: 19845)
+Completed 200 OK in 221ms (Views: 177.0ms | ActiveRecord: 42.6ms | Allocations: 20356)
+
+
+Started GET "/novels" for ::1 at 2021-02-09 16:22:34 +0000
+Processing by NovelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering novels/index.html.erb within layouts/application
+  [1m[36mNovel Load (1.1ms)[0m  [1m[34mSELECT `novels`.* FROM `novels`[0m
+  ↳ app/views/novels/index.html.erb:16
+  Rendered novels/index.html.erb within layouts/application (Duration: 20.7ms | Allocations: 957)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 83.0ms | Allocations: 5037)
+Completed 200 OK in 103ms (Views: 101.1ms | ActiveRecord: 1.1ms | Allocations: 5439)
+
+
+Started GET "/novels/1" for ::1 at 2021-02-09 16:22:35 +0000
+Processing by NovelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNovel Load (1.1ms)[0m  [1m[34mSELECT `novels`.* FROM `novels` WHERE `novels`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/novels_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering novels/show.html.erb within layouts/application
+  Rendered novels/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 273)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 49.5ms | Allocations: 4384)
+Completed 200 OK in 110ms (Views: 69.1ms | ActiveRecord: 1.1ms | Allocations: 6498)
+
+
+Started GET "/novels" for ::1 at 2021-02-09 16:22:37 +0000
+Processing by NovelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering novels/index.html.erb within layouts/application
+  [1m[36mNovel Load (1.4ms)[0m  [1m[34mSELECT `novels`.* FROM `novels`[0m
+  ↳ app/views/novels/index.html.erb:16
+  Rendered novels/index.html.erb within layouts/application (Duration: 20.4ms | Allocations: 947)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 87.9ms | Allocations: 5617)
+Completed 200 OK in 109ms (Views: 104.6ms | ActiveRecord: 1.4ms | Allocations: 6008)
+
+
+Started GET "/novels/1/edit" for ::1 at 2021-02-09 16:22:38 +0000
+Processing by NovelsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering novels/edit.html.erb within layouts/application
+  Rendered novels/edit.html.erb within layouts/application (Duration: 27.8ms | Allocations: 1749)
+  Rendered layout layouts/application.html.erb (Duration: 44.9ms | Allocations: 2404)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 0.0ms | Allocations: 2855)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <div class="container">
+    2: <h1> Edit Novel Details</h1>
+    3: <%= form_for @novel do |f| %>
+    4:     <div class="form-group">
+    5:     <%= f.label :title %><br />
+    6:     <%= f.text_field :title, class:'form-control' %><br />
+  
+app/views/novels/edit.html.erb:3
+Started GET "/" for ::1 at 2021-02-16 14:27:44 +0000
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 11.5ms | Allocations: 229)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 432.0ms | Allocations: 8562)
+Completed 200 OK in 525ms (Views: 464.1ms | ActiveRecord: 0.0ms | Allocations: 11181)
+
+
+Started GET "/novels" for ::1 at 2021-02-16 14:27:47 +0000
+Processing by NovelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering novels/index.html.erb within layouts/application
+  [1m[36mNovel Load (1.9ms)[0m  [1m[34mSELECT `novels`.* FROM `novels`[0m
+  ↳ app/views/novels/index.html.erb:16
+  Rendered novels/index.html.erb within layouts/application (Duration: 128.9ms | Allocations: 7932)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 160.6ms | Allocations: 11992)
+Completed 200 OK in 250ms (Views: 190.4ms | ActiveRecord: 5.9ms | Allocations: 14962)
+
+
+Started DELETE "/novels/1" for ::1 at 2021-02-16 14:27:52 +0000
+Processing by NovelsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering novels/destroy.html.erb within layouts/application
+  Rendered novels/destroy.html.erb within layouts/application (Duration: 9.4ms | Allocations: 106)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 42.1ms | Allocations: 4213)
+Completed 200 OK in 61ms (Views: 59.8ms | ActiveRecord: 0.0ms | Allocations: 4737)
+
+
+Started GET "/novels" for ::1 at 2021-02-16 14:28:03 +0000
+Processing by NovelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering novels/index.html.erb within layouts/application
+  [1m[36mNovel Load (1.0ms)[0m  [1m[34mSELECT `novels`.* FROM `novels`[0m
+  ↳ app/views/novels/index.html.erb:16
+  Rendered novels/index.html.erb within layouts/application (Duration: 14.0ms | Allocations: 947)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 96.1ms | Allocations: 5624)
+Completed 200 OK in 113ms (Views: 110.7ms | ActiveRecord: 1.0ms | Allocations: 6015)
+
+
+Started GET "/novels/1/edit" for ::1 at 2021-02-16 14:28:07 +0000
+Processing by NovelsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering novels/edit.html.erb within layouts/application
+  Rendered novels/edit.html.erb within layouts/application (Duration: 44.1ms | Allocations: 2357)
+  Rendered layout layouts/application.html.erb (Duration: 52.4ms | Allocations: 2421)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.0ms | Allocations: 2872)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <div class="container">
+    2: <h1> Edit Novel Details</h1>
+    3: <%= form_for @novel do |f| %>
+    4:     <div class="form-group">
+    5:     <%= f.label :title %><br />
+    6:     <%= f.text_field :title, class:'form-control' %><br />
+  
+app/views/novels/edit.html.erb:3
+Started GET "/novels" for ::1 at 2021-02-16 14:28:45 +0000
+Processing by NovelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering novels/index.html.erb within layouts/application
+  [1m[36mNovel Load (4.1ms)[0m  [1m[34mSELECT `novels`.* FROM `novels`[0m
+  ↳ app/views/novels/index.html.erb:16
+  Rendered novels/index.html.erb within layouts/application (Duration: 25.8ms | Allocations: 1068)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 74.7ms | Allocations: 5302)
+Completed 200 OK in 96ms (Views: 91.1ms | ActiveRecord: 4.1ms | Allocations: 5804)
+
+
+Started GET "/users" for ::1 at 2021-02-16 14:28:48 +0000
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 107)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.3ms | Allocations: 4184)
+Completed 200 OK in 55ms (Views: 53.6ms | ActiveRecord: 0.0ms | Allocations: 5072)
+
+
+Started GET "/users/new" for ::1 at 2021-02-16 14:28:48 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 12.7ms | Allocations: 1914)
+  Rendered layout layouts/application.html.erb (Duration: 26.0ms | Allocations: 1978)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.0ms | Allocations: 2458)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <div class="container">
+    2: <h2>Create User Account</h2>
+    3: <%= form_for @user do |f| %>
+    4:     <div class="field" style="100%">
+    5: <% if @user.errors.any? %>
+    6: <div id="error_explanation">
+  
+app/views/users/new.html.erb:3
+Started GET "/users" for ::1 at 2021-02-16 14:31:11 +0000
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 54.8ms | Allocations: 4151)
+Completed 200 OK in 102ms (Views: 100.4ms | ActiveRecord: 0.0ms | Allocations: 5144)
+
+
+Started GET "/novels/new" for ::1 at 2021-02-16 14:31:13 +0000
+Processing by NovelsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering novels/new.html.erb within layouts/application
+  [1m[36mGenre Load (1.9ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+  ↳ app/views/novels/new.html.erb:10:in `collect'
+  [1m[36mPublisher Load (11.0ms)[0m  [1m[34mSELECT `publishers`.* FROM `publishers`[0m
+  ↳ app/views/novels/new.html.erb:17:in `collect'
+  [1m[36mAuthor Load (5.7ms)[0m  [1m[34mSELECT `authors`.* FROM `authors`[0m
+  ↳ app/views/novels/new.html.erb:23:in `collect'
+  Rendered novels/new.html.erb within layouts/application (Duration: 328.8ms | Allocations: 18352)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 376.9ms | Allocations: 22347)
+Completed 200 OK in 414ms (Views: 361.0ms | ActiveRecord: 51.7ms | Allocations: 23447)
+
+
